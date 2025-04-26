@@ -1,0 +1,356 @@
+@font-face{
+    src: url(../webfonts/Roboto-Regular.ttf);
+    font-family: roboto;
+}
+@font-face{
+    src: url(../webfonts/Roboto-Thin.ttf);
+    font-family: roboto thin;
+}
+*{
+    color: white;
+    font-family: roboto;
+}
+body{
+    margin: 0;
+    background: white;
+    user-select: none;
+    touch-action: none;
+}
+.bkgd, #play h1, #cvr{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.bkgd{
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.625s;
+}
+article, input[type="file"]{display: none}
+article{
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transition: opacity 0.625s;
+}
+#menu{height: auto}
+h1, button, article div, #play td, p, #play input, h6, #rvw td{
+    border: 0.1em solid white;
+    background: rgba(0, 0, 0, 0.25);
+}
+h1, h2, h5, h6{
+    text-align: center;
+    font-family: roboto thin;
+    font-weight: normal;
+}
+#menu h1, #pfrn h1{
+    margin: 0 auto 0.375em;
+    padding: 0.5em;
+}
+button, #pfrn li{transition: background 0.25s}
+button, input{outline: 0}
+#menu button, #pfrn>section>button, #play div button, #scr button{border-radius: 100vh}
+#menu button{
+    display: block;
+    margin: auto;
+}
+#pfrn{text-align: center}
+#pfrn>section>div, p, #scr div{overflow: scroll}
+#pfrn>section>div, #scr div{text-align: left}
+::-webkit-scrollbar{height: 0}
+::-webkit-scrollbar-thumb{
+    background: rgba(0, 0, 0, 0.25);
+    position: absolute;
+}
+h2{margin: auto}
+h3{font-weight: normal}
+#pfrn div div{
+    background: 0;
+    position: relative;
+    overflow: hidden;
+    transition: max-height 0.25s;
+}
+#pfrn ul{
+    display: block;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+#pfrn li{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+#pfrn label{
+    display: block;
+    width: 100%;
+}
+#pfrn div div button{
+    border: 0;
+    background: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+#pfrn button.fa{transition: color 0.25s, transform 0.25s}
+#pfrn button.fa:not(.active), #play input::placeholder{color: gainsboro}
+#pfrn button.fa.down{transform: rotate(-180deg)}
+#nqr{-webkit-appearance: none}
+#nqr::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    background: white;
+}
+#pfrn input[type="number"]{
+    width: 2.5em;
+    border: 0;
+    background: 0;
+    text-align: center;
+}
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+#pfrn>section>div>button{background: 0}
+.fas{transition: background 0.25s, opacity 0.125s}
+#pfrn>section>div>button:not(.active) .fas{opacity: 0}
+#pfrn h4, #pfrn>section>button, #scr button{display: inline-block}
+h4{font-weight: normal}
+#pfrn>section>button, #scr button{
+    margin: 0 calc(10vw / 6);
+    width: 45vw;
+    float: left;
+}
+#pfrn>section>button:first-of-type, #scr button:first-of-type{margin-left: calc(10vw / 3)}
+#pfrn section:last-child{
+    display: none;
+    transform: translateY(-50%);
+    position: absolute;
+    top: 50%;
+}
+#play>button, #rvw button{border-radius: 50%}
+#play>*{margin: auto}
+table{border-collapse: collapse}
+#play td{
+    width: calc(100% / 3);
+    text-align: center;
+}
+#play h5, #play h4{margin: 0}
+.red span{
+    color: #ff3f34;
+    transition: color 0.125s;
+}
+p{text-align: justify}
+#play div{
+    display: none;
+    width: auto;
+    border: 0;
+    background: 0;
+}
+#play div button, #play input{transition: color 0.625s, border-color 0.625s}
+#play div button{
+    display: none;
+    overflow: scroll;
+    white-space: nowrap;
+    text-align: left;
+}
+#play div button::-webkit-scrollbar{
+    width: 0;
+    height: 0.25em;
+}
+#play div span{color: inherit}
+#play input{
+    display: block;
+    margin: auto;
+    border: 0;
+    text-align: center;
+}
+h6{
+    margin: 0 auto;
+    color: gainsboro;
+    border: 0;
+    text-align: center;
+}
+#play h1{
+    display: none;
+    margin: 0;
+    color: #ff3f34;
+    border: 0;
+    background: rgba(0, 0, 0, 0.0625);
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.625s;
+}
+#scr table{width: 100%}
+#scr td{width: 50%}
+#scr td:last-child{text-align: right}
+#rvw{overflow: scroll}
+#rvw table{margin: auto}
+#rvw table .fas{float: right}
+#rvw .fa-check{color: lime}
+#rvw .fa-times{color: #ff3f34}
+#rvw h3:nth-child(n + 2){font-family: roboto thin}
+@media screen and (max-width: 600px){
+    h1, button, article div, #play td, p, #play input, h6, #rvw td{border: 2.25pt solid white}
+    #menu h1{
+    	width: 87.5%;
+    	padding: 0.5em 0;
+    	font-size: 3.75em;
+    }
+    button{
+    	padding: 0.25em;
+    	font-size: 1.25em;
+    }
+    button:active{background: rgba(0, 0, 0, 0.5)}
+    #menu button{width: 50%}
+    #pfrn section>div{
+    	margin: 6.25vw auto 0;
+    	width: calc(87.5% - 1.5em);
+    	padding: 0.75em;
+    }
+    #pfrn li:not(:first-child):active, #pfrn li:only-child:active, #pfrn>section>div>button:active{background: rgba(0, 0, 0, 0.125)}
+    /*Mobile*/
+}
+@media screen and (min-width: 600px){
+    #menu h1, #pfrn h1{
+        width: 5em;
+        font-size: 12.5vh;
+    }
+    button, #pfrn li:not(:first-child), #pfrn label, input[type="range"], #play h1{cursor: pointer}
+    button:hover{background: rgba(0, 0, 0, 0.5)}
+    #menu button, #pfrn>section>button, #scr button{
+        padding: 0.25em;
+        font-size: 5vh;
+    }
+    #menu button{
+        margin: 0.5em auto;
+        width: 10em;
+    }
+    #pfrn>section>div, #scr div{
+        margin: 3.125vw auto 0;
+        width: calc(93.75vw - 1.2em);
+        height: calc(100% - 3.125vw - 1.2em);
+        padding: 0.5em;
+        line-height: 0.25em;
+        font-size: 12.5vh;
+    }
+    #pfrn>section>div::-webkit-scrollbar, #scr div::-webkit-scrollbar{width: 0.2em}
+    h2{
+        margin-bottom: 0.75em;
+        font-size: 0.625em;
+    }
+    h3{
+        margin: 1em 0 0.5em;
+        font-size: 0.25em;
+    }
+    #pfrn div div, #nqr, #pfrn>section>div>button{margin-left: 5vh}
+    #pfrn div div{
+        width: 5em;
+        max-height: 0.625em;
+        border-width: calc(5vh * 0.1);
+        line-height: 0.3125em;
+    }
+    #pfrn ul, #pfrn input[type="number"], #pfrn>section>div>button, #pfrn h4{font-size: 0.3125em}
+    #pfrn ul{width: calc(100% - 2em)}
+    #pfrn li:not(:first-child):hover, #pfrn li:only-child:hover, #pfrn>section>div>button:hover{background: rgba(0, 0, 0, 0.125)}
+    #pfrn li:not(:last-child), #pfrn label{padding: 0.5em}
+    #pfrn div div button{
+        width: 1.25em;
+        height: 1.25em;
+        font-size: 0.5em;
+    }
+    #pfrn button.fa:not(.active), input[readonly]{cursor: default}
+    #nqr{
+        width: 43.75%;
+        height: 0.5em;
+        font-size: 2vh;
+    }
+    #nqr::-webkit-slider-thumb{
+        width: 1em;
+        height: 1.5em;
+    }
+    #pfrn input[type="number"]{border-bottom: 0.1em solid white}
+    #pfrn>section>div>button{
+        width: 2em;
+        height: 2em;
+    }
+    #pfrn h4{margin-left: -0.625em}
+    #pfrn>section>button, #scr button{margin-top: 0.375em}
+    #play>button, #rvw button{
+        display: block;
+        width: 2.25em;
+        height: 2.25em;
+        border-width: 0.25em;
+        font-size: 3.75vh;
+    }
+    #play>button{
+        margin: 1vh auto;
+        position: relative;
+        right: calc(25vw + 1.75em);
+    }
+    #play table{width: 50vw}
+    #play td{
+        height: 12.5vh;
+        border-width: calc(5vh * 0.1);
+    }
+    #play h5{font-size: 3.125vh}
+    #play h4{font-size: 5vh}
+    p{
+        margin-top: 0.5em!important;
+        width: calc(50vw - 1.5em - 10vh * 0.2);
+        height: calc(40vh - 1.5em - 10vh * 0.2);
+        border-width: calc(10vh * 0.1);
+        padding: 0.75em;
+        font-size: 3.75vh;
+    }
+    #play div{
+        height: calc(45.5vh - 2.0625em - 0.5em / 3);
+        padding: calc((45.5vh - 6.0625em - 0.5em / 3) / 6) calc(10vw / 6);
+        font-size: 5vh;
+    }
+    #play div button{
+        margin: calc((45.5vh - 6.0625em - 0.5em / 3) / 6) calc(10vw / 6);
+        width: 45vw;
+        padding: 0.25em 0.625em 0.125em;
+        font-size: 5vh;
+        float: left;
+    }
+    #play input{
+        width: 30vw;
+        border-bottom: calc(10vh * 0.1) solid white;
+        padding: 0.25em;
+        font-size: 3.75vh;
+    }
+    h6{
+        width: 25vw;
+        font-size: 2.25vh;
+    }
+    #play h1{font-size: 20vh}
+    #scr table{
+        line-height: 1.75em;
+        font-size: 5vh;
+    }
+    #rvw button{margin: 0.5em 0.5em 0}
+    #rvw table{
+        margin-bottom: 5vh;
+        width: 87.5%;
+    }
+    #rvw td{
+        border: 0.2em solid white;
+        padding: 0.5em;
+        font-size: 5vh
+    }
+    #rvw h3{
+        margin: 0;
+        font-size: 5vh;
+    }
+    #rvw h3:first-child{margin-bottom: 1em}
+    #rvw .fas{margin-left: 0.5em}
+    #rvw h3:nth-child(n + 2){margin: 0.25em 0 0.25em 0.75em}
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="author" content="Gian Apostol">
+		<link rel="icon" href="assets/img/icon.ico">
+		<title>QUIZ RUSH</title>
+		<link rel="stylesheet" href="assets/css/icons.css">
+		<link rel="stylesheet" href="assets/css/main.css">
+		<script src="assets/js/jquery.js"></script>
+		<script src="assets/js/main.js"></script>
+	</head>
+	<body>
+		<div class="bkgd"></div>
+		<div class="bkgd"></div>
+		<article id="menu">
+			<h1>Q U I Z<br>R U S H</h1>
+			<button>Play</button>
+		</article>
+		<article id="pfrn">
+			<section>
+				<div>
+					<h2>P R E F E R E N C E S</h2>
+					<h3>Quiz File Name</h3>
+					<div>	
+						<ul><li><label><input type="file" accept=".quiz">&plus;Add a quiz...</label></li></ul>
+						<button class="fa fa-angle-up"></button>
+					</div>
+					<h3>No. of Questions</h3>
+					<input type="range" min="0" max="0" value="0" id="nqr">
+					<input type="number" readonly id="nqn">
+					<h3>Timer</h3>
+					<button class="active"><i class="fas fa-check"></i></button>
+					<input type="number" value="300" hsty="300" id="tmr">
+					<h4>sec/question</h4>
+				</div>
+				<button>Cancel</button>
+				<button>Start</button>
+			</section>
+			<section>
+				<h1>P A U S E D</h1>
+				<button>Resume</button>
+				<button>Exit</button>
+			</section>
+		</article>
+		<article id="hlp"></article>
+		<article id="play">
+			<button class="fas fa-pause"></button>
+			<table><tr>
+				<td>
+					<h5>QUESTION</h5>
+					<h4><span></span>/<span></span></h4>
+				</td>
+				<td>
+					<h5>TIME</h5>
+					<h4><span></span><span></span><span></span></h4>
+				</td>
+				<td>
+					<h5>SCORE</h5>
+					<h4></h4>
+				</td>
+			</tr></table>
+			<p></p>
+			<div>
+				<button>A. <span></span></button>
+				<button>B. <span></span></button>
+				<button>C. <span></span></button>
+				<button>D. <span></span></button>
+			</div>
+			<div>
+				<input placeholder="Answer here">
+				<h6>(Press "Enter" to submit answer.)</h6>
+			</div>
+			<h1>T I M E ' S &nbsp; U P</h1>
+		</article>
+		<article id="scr"><section>
+			<div>
+				<h2>S C O R E</h2>
+				<table>
+					<tr>
+						<td>Total score</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Percentage</td>
+						<td></td>
+					</tr>
+				</table>
+			</div>
+			<button>Review</button>
+			<button>Menu</button>
+		</section></article>
+		<article id="rvw">
+			<button class="fas fa-arrow-left"></button>
+			<table></table>
+		</article>
+		<div id="cvr"></div>
+	</body>
+</html>
